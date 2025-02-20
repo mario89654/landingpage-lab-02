@@ -1,0 +1,168 @@
+/* ===================== */
+/* RESET Y ESTILOS GENERALES */
+/* ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #F4F4F4;
+    text-align: center;
+  }
+  /* ===================== */
+  /* MENÚ PRINCIPAL (NAV) */
+  /* ===================== */
+  nav {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos */
+    align-items: center; /* Centra verticalmente */
+    padding: 15px 20px;
+    background-color: #222;
+    color: white;
+    flex-wrap: wrap; /* Permite ajuste en pantallas pequeñas */
+  }
+  .logo a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+  }
+  .logo a:hover {
+    transform: scale(1.1);
+  }
+  .menu {
+    display: flex;
+    gap: 20px; /* Espaciado entre elementos */
+    list-style: none;
+    flex-wrap: wrap; /* Ajusta en pantallas pequeñas */
+  }
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  .menu li a:hover {
+    background-color: #444;
+    border-radius: 5px;
+    transform: scale(1.05);
+  }
+  /* ===================== */
+  /* SECCIÓN HERO */
+  /* ===================== */
+  #hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  #hero img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  #hero img:hover {
+    transform: scale(1.05);
+  }
+  /* ===================== */
+  /* SECCIÓN GALERÍA DE IMÁGENES */
+  /* ===================== */
+  .knife-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en diferentes tamaños */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    list-style: none;
+  }
+  .knife-gallery li {
+    flex: 1 1 calc(33.333% - 20px); /* 3 columnas en pantallas grandes */
+    max-width: 250px; /* Limita el tamaño máximo */
+    height: 250px;
+    overflow: hidden; /* Evita desbordamientos */
+    transition: transform 0.3s ease-in-out;
+  }
+  .knife-gallery li:hover {
+    transform: scale(1.05);
+  }
+  .knife-gallery img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  .knife-gallery img:hover {
+    transform: scale(1.1);
+  }
+  .knife-gallery figcaption {
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  /* ===================== */
+  /* SECCIÓN DE ENVÍOS Y MÉTODOS DE PAGO */
+  /* ===================== */
+  #delivery,
+  #payment-methods {
+    padding: 20px;
+    background-color: white;
+    margin: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  /* ===================== */
+  /* FOOTER */
+  /* ===================== */
+  footer {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  footer ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+  }
+  footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  footer ul li a:hover {
+    color: #ffcc00;
+  }
+  /* ===================== */
+  /* MEDIA QUERIES PARA MÓVILES Y TABLETS */
+  /* ===================== */
+  @media (max-width: 1024px) {
+    .knife-gallery li {
+      flex: 1 1 calc(50% - 20px); /* 2 columnas en pantallas medianas */
+    }
+  }
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      text-align: center;
+    }
+    .menu {
+      justify-content: center;
+      padding-top: 10px;
+    }
+    .knife-gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+    .knife-gallery li {
+      flex: 1 1 100%; /* 1 columna en pantallas pequeñas */
+    }
+  }
