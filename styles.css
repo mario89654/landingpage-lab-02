@@ -36,7 +36,7 @@
   }
   .menu {
     display: flex;
-    gap: 5px; /* Espaciado entre elementos */
+    gap: 20px; /* Espaciado entre elementos */
     list-style: none;
     flex-wrap: nowrap; /* Ajusta en pantallas pequeñas */
   }
