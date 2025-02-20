@@ -38,7 +38,7 @@
     display: flex;
     gap: 15px; /* Espaciado entre elementos */
     list-style: none;
-    flex-wrap: wrap; /* Ajusta en pantallas pequeñas */
+    flex-wrap: nowrap; /* Ajusta en pantallas pequeñas */
   }
   .menu li a {
     color: white;
